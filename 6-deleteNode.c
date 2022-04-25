@@ -24,6 +24,14 @@ void deleteNode(node **head_ref, int key)
 	free(temp);
 }
 
+void printList(node *headNode)
+{
+	while (headNode != NULL)
+	{
+		printf("%d ", headNode->data);
+		headNode = headNode->next;
+	}
+}
 
 int main(void)
 {
