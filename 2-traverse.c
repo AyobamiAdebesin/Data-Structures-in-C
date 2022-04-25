@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 void printList(node *headNode)
@@ -7,31 +9,24 @@ void printList(node *headNode)
 		printf("%d ", headNode->data);
 		headNode = headNode->next;
 	}
-}	
+	return ;
+}
 
 int main(void)
 {
-	node *first;
-	node *second;
-	node *third;
-
-	first = (node *)malloc(sizeof(node));
-	second = (node *)malloc(sizeof(node));
-	third = (node *)malloc(sizeof(node));
+	node *first = malloc(sizeof(node));
+	node *second = malloc(sizeof(node));
+	node *third = malloc(sizeof(node));
 
 	first->data = 1;
 	first->next = second;
-
 	second->data = 2;
 	second->next = third;
-
 	third->data = 3;
 	third->next = NULL;
 
 	printList(first);
 	printf("\n");
 
-
-
 	return (0);
-}	
+}

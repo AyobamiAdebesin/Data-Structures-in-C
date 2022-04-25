@@ -12,7 +12,6 @@ void insertNode(node *prev_node, int new_data)
 	new_node->data = new_data;
 	new_node->next = prev_node->next;
 	prev_node->next = new_node;
-
 }
 
 void printList(node *headNode)
