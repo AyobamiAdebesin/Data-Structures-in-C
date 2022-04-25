@@ -6,19 +6,24 @@
 #include <stddef.h>
 #include <string.h>
 
-/**
- * Node - struct for a node
- * @data: The data for the node
- * @next: Pointer to the next node\
- */
 
+/**
+ * struct Node - struct for a node
+ * @data: The data for the node
+ * @next: Pointer to the next node
+ *
+ * Description: model of a linked list node
+ *
+ */
 typedef struct Node
 {
 	int data;
 	struct Node *next;
 } node;
 
-
-
-
+void printLiist(node *);
+void insertNode(node *prevNode, int new_data);
+void insertHeadNode(node **head_ref, int new_data);
+void insertTailNode(node **head_ref, int new_data);
+void deleteNode(node **head_ref, int key);
 #endif
