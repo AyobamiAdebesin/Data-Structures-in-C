@@ -21,7 +21,7 @@ typedef struct Node
 	struct Node *next;
 } node;
 
-void printLiist(node *);
+void printList(node *);
 void insertNode(node *prevNode, int new_data);
 void insertHeadNode(node **head_ref, int new_data);
 void insertTailNode(node **head_ref, int new_data);
